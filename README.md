@@ -3,7 +3,10 @@
 Website for small shops in Nairobi: stock, sales, M-Pesa SMS matching and credit.
 Java servlets (Jakarta EE 10), MySQL, plain HTML. KCA Diploma in IT project, supervisor Luke Mbom.
 
-## Run it
+## Quick start (Windows)
+`scripts\run-local.ps1` starts MySQL, builds and tests the M-Pesa reader, builds the WAR, restarts Tomcat, and creates a demo owner if `DEMO_OWNER_PASSWORD` is set. Passwords are never stored in the repo.
+
+## Run it manually
 1. Install JDK 17+, Maven, MySQL 8 and Tomcat 10.1+, plus a C++17 compiler (g++ / MinGW-w64) for the M-Pesa reader.
 2. `mysql -u root -p < sql/schema.sql`
 3. Set `DB_URL`, `DB_USER`, `DB_PASS` if yours differ from the defaults in `Db.java`.
